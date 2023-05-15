@@ -60,7 +60,7 @@ public class EditorialServicios {
         }
     }
     
-    @Transactional
+    
     public Editorial getOne(String id){
         return editorialRepositorio.getOne(id);
     }

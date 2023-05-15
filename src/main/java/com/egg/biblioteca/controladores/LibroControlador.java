@@ -92,28 +92,25 @@ public class LibroControlador {
     }
     
     @PostMapping("/modificar/{isbn}")
-    public String modificar(@PathVariable Long isbn, String titulo, Integer ejemplares, String idAutor, String idEditorial, ModelMap modelo){
+    public String modificar(@PathVariable Long isbn, String titulo , Integer ejemplares, String idAutor, String idEditorial, ModelMap modelo){
         
         try {
+        
             
-            List<Autor> autores = autorServicios.listarAutores();
-            List<Editorial> editoriales = editorialServicios.listarEditoriales();
+           
             
-            modelo.addAttribute("autores", autores);
-            modelo.addAttribute("editoriales", editoriales);
+            libroServicios.modificarLibros(isbn, titulo, ejemplares, idAutor, idEditorial);
             
-            libroServicios.modificarLibros(isbn, titulo, idAutor, idEditorial, ejemplares);
-            
-            return "redirect:../lista";
+            return "redirect:/libro/lista";
             
         } catch (MiException ex) {
             List<Autor> autores = autorServicios.listarAutores();
             List<Editorial> editoriales = editorialServicios.listarEditoriales();
             
-            modelo.put("error", ex.getMessage());
+            modelo.put("EL ERROR ES ACA", ex.getMessage());
             
             modelo.addAttribute("autores", autores);
-            modelo.put("editoriales", editoriales);
+            modelo.addAttribute("editoriales", editoriales);
             
             return "libro_modificar.html";
         }
