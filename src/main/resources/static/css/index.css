@@ -32,7 +32,7 @@
 }
 
 .header{
-    background-image: url(FondoZoom_1.jpg);
+    background-image: url(/img/FondoZoom_1.jpg);
     background-size: cover;
     height: 550px;
     display: flex;
@@ -53,6 +53,7 @@
 }
 
 .contenedorMain{
+    background-image: url(/img/FondoZoom_1.jpg);
     width: 50%;
     display: flex;
     flex-direction: column;

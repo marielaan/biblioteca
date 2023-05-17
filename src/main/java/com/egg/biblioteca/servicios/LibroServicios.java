@@ -33,7 +33,7 @@ public class LibroServicios {
         validar(isbn, titulo, ejemplares, idAutor, idEditorial);
         
         
-       Optional<Libros> respuesta = libroRepositorio.findById(isbn);
+       //Optional<Libros> respuesta = libroRepositorio.findById(isbn);
        Optional<Autor> respuestaAutor = autorRepositorio.findById(idAutor);
        Optional<Editorial> respuestaEditorial = editorialRepositorio.findById(idEditorial);
        

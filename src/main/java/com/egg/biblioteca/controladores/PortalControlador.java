@@ -3,7 +3,6 @@ package com.egg.biblioteca.controladores;
 
 import com.egg.biblioteca.entidades.Usuario;
 import com.egg.biblioteca.excepciones.MiException;
-import com.egg.biblioteca.excepciones.MiException;
 import com.egg.biblioteca.servicios.UsuarioServicios;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
